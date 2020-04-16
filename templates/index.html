@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> Connected </h1>
+    <ul id="list-cupcake">
+    {% for cupcake in cupcakes %}
+        <li>{{cupcake.flavor}}</li>
+    {% endfor %}
+</ul>
+<form  id="search">
+    <label for="flavor">flavor</label>
+    <input type="text" id="flavor" name="flavor">
+    <label for="size">Size</label>
+    <input type="text" id="size" name="size">
+    <label for="rating">Rating</label>
+    <input type="text" id="rating" name="rating">
+    <label for="image">image</label>
+    <input type="text" id="image" name="image">
+    <button>Add</button>
+</form>
+{% endblock %} 
